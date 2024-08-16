@@ -1,14 +1,14 @@
 {
   "name": "simple-web-application",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "Lucia Ligliani",
   "license": "ISC",
-  "description": "",
+  "description": "Simple web application to perform a basic arithmetic operation",
   "dependencies": {
     "express": "^4.19.2"
   }
