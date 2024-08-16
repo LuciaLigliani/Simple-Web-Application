@@ -1,16 +1,18 @@
 const express = require('express');
+
 const app = express();
 const port = 3000;
 
-// Basic middleware
+// Import the calculator router
+const calculatorRouter = require('./src/server/routes/calculatorRoutes');
+
+// Basic middleware to parse JSON data
 app.use(express.json());
 
 // Routes
-app.get('/', (req, res) => {
-  res.send('Hello World!');
-});
+app.use('/api', calculatorRouter);
 
 // Start the server
 app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
+  console.log(`Server is running at http://localhost:${port}`);
 });
