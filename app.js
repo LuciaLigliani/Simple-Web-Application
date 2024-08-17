@@ -1,10 +1,9 @@
 const express = require('express');
+// Import the calculator router
+const calculatorRouter = require('./src/server/routes/calculatorRoutes');
 
 const app = express();
 const port = 3000;
-
-// Import the calculator router
-const calculatorRouter = require('./src/server/routes/calculatorRoutes');
 
 // Basic middleware to parse JSON data
 app.use(express.json());
