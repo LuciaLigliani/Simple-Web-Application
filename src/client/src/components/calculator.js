@@ -15,8 +15,8 @@ function Calculator() {
         // Send the request to the server
         try {
             const response = await axios.post('http://localhost:3000/api/calculate', {
-                num1: parseInt(num1),
-                num2: parseInt(num2),
+                num1: parseFloat(num1),
+                num2: parseFloat(num2),
             });
             setResult(response.data.result);
         } catch (error) {

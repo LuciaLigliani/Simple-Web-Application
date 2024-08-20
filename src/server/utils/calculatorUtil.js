@@ -9,14 +9,14 @@ isPrime = (num) => {
 
 // Function to find the next prime number after a given number
 exports.nextPrime = (num) => {
-  let prime = num + 1;
+  let prime = parseInt(num) + 1;
   while (true) {
       if (isPrime(prime)) return prime;
       prime++;
   }
 };
 
-// Function to validate the input that has to be a number and within the range -99999 to 99999
+// Function to validate the input that has to be a number and within the range -10000 to 10000
 exports.validateInput = (num1, num2) => {
   // Check if both input are not null
   if (num1 === null || num2 === null) {
@@ -28,9 +28,9 @@ exports.validateInput = (num1, num2) => {
     return 'Both inputs must be numbers.';
   }
 
-  // Check if both numbers are within the range -99999 to 99999
-  if (num1 < -9999 || num1 > 9999 || num2 < -99999 || num2 > 99999) {
-      return 'Both numbers must be between -99999 and 99999.';
+  // Check if both numbers are within the range -10000 to 10000
+  if (num1 < -10000 || num1 > 10000 || num2 < -10000 || num2 > 10000) {
+      return 'Both numbers must be between -10000 and 10000.';
   }
 
   return null;
