@@ -8,15 +8,9 @@ function Calculator() {
     const [error, setError] = useState('');
 
     const calculate = async () => {
-        // Validate input fields
-        if (num1 === '' || num2 === '') {
-          setError('Both numbers are required.');
-          // Clear any previous result
-          setResult(''); 
-          return;
-        }
-        // Clear the error if inputs are valid
-        setError('');
+        // Reset error and result
+        setError(null);
+        setResult(null);
 
         // Send the request to the server
         try {
@@ -26,7 +20,11 @@ function Calculator() {
             });
             setResult(response.data.result);
         } catch (error) {
-            console.error('Error:', error);
+            if (error.response && error.response.data.error) {
+                setError(error.response.data.error);
+            } else {
+                setError('An unexpected error occurred.');
+            }
         }
     };
 
