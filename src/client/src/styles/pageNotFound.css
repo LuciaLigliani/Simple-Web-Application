@@ -19,7 +19,6 @@
   margin-top: 20px;
   font-size: 1.5rem;
   color: #373737; 
-  
 }
 
 .home-link {
@@ -34,4 +33,28 @@
 
 .home-link:hover {
   text-decoration: underline;
+}
+
+/* Responsive layout */
+@media screen and (max-width: 1000px){
+  .not-found img {
+    width: 250px;
+    height: 200px;
+  }
+
+  @media screen and (max-height: 875px){
+    .not-found{
+      margin-top: 10px;
+    }
+
+    .not-found h1 {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    .not-found p {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  }
 }

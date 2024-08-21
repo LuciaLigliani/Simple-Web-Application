@@ -9,18 +9,19 @@
 .container {
   background-color: #C8D0C3;
   padding: 20px;
+  margin: 20px;
   border-radius: 8px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   display: flex;
   max-width: 1000px;
-  width: 95%;
+  width: 80%;
 }
 
 .container > div { /* Selects all direct children of .container */
   flex: 1;
-  padding: 20px;
 }
 
+/* Description style */
 .description {
   background-color: #E8E8E8;
   border-radius: 8px;
@@ -29,16 +30,26 @@
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
+/* Calculator style */
 .calculator {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 40px;
+  width: 100%; 
+}
+
+/* Input styles */
+.input-div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%; 
 }
 
 .input-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center; 
   width: 100%;
 }
 
@@ -55,9 +66,11 @@ input[type="number"] {
 
 label {
   font-size: 1.2em;
+  margin: 10px;
   color: #373737;
 }
 
+/* Button styles */
 button {
   padding: 10px 20px;
   border: none;
@@ -79,12 +92,14 @@ p {
   color: #373737; 
 }
 
+/* Result style */
 .result {
   margin-top: 40px;
   font-size: 1.5em;
   color: #222222; 
 }
 
+/* Error style */
 .error {
   color: #E74C3C; 
   margin-top: 40px;
@@ -93,6 +108,7 @@ p {
   text-align: center;
 }
 
+/* Reset link styles*/
 .reset-link {
   display: inline-block;
   margin-top: 20px;
@@ -122,7 +138,6 @@ p {
 .tooltip .tooltiptext {
   visibility: hidden;
   margin: 10px;
-  /* width: 200px; */
   background-color: #696969;
   color: #ffffff;
   font-weight: normal;
@@ -140,4 +155,86 @@ p {
 .tooltip:hover .tooltiptext {
   visibility: visible;
   opacity: 0.9;
+}
+
+/* Responsive layout */
+@media screen and (max-width: 910px) {
+  .container {
+    flex-direction: column; /* Stack elements vertically on small screens */
+  }
+
+  .description {
+    order: 2;
+    margin: 20px;
+    margin-bottom: 20px;
+  }
+
+  .calculator {
+    order: 1;
+  }
+
+  .input-container {
+    flex-direction: column; /* Stack inputs vertically on small screens */
+    width: 50%;
+  }
+
+  input[type="number"] {
+    width: calc(100% - 20px);
+  }
+
+  
+  .tooltip .tooltiptext {
+    top: -200%;
+  }
+}
+
+@media screen and (max-width: 500px){
+  input[type="number"] {
+    font-size: 1em;
+  }
+  
+  label {
+    font-size: 0.9em;
+  }
+
+  button {
+    font-size: 1.2em;
+  }
+  
+  p {
+    font-size: 1em;
+  }
+  
+  .result {
+    font-size: 1em;
+  }
+  
+  .error {
+    font-size: 1em;
+  }
+
+  .tooltip img {
+    width: 18px;
+    height: 18px;
+    margin-left: 10px;
+  }
+}
+
+@media screen and (max-height: 875px) and (max-width: 910px){
+  .calculator {
+    margin-top: 0px;
+  }
+
+  .button {
+    margin-top: 5px;
+  }
+
+  .reset-link{
+    margin-top: 5px;
+  }
+
+  .result {
+    margin-top: 5px;
+  }
+  
 }

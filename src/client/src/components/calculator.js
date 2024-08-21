@@ -56,7 +56,7 @@ function Calculator() {
                     </div>
                     <div className="calculator">
                         <div className="input-container">
-                            <div>
+                            <div className="input-div">
                                 <label htmlFor="num1">First Number:</label>
                                 <input
                                     type="number"
@@ -65,7 +65,7 @@ function Calculator() {
                                     onChange={(e) => setNum1(e.target.value)}
                                 />
                             </div>
-                            <div>
+                            <div className="input-div">
                                 <label htmlFor="num2">Second Number:</label>
                                 <input
                                     type="number"
