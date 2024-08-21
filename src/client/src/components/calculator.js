@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import Header from './header';
+import '../styles/calculator.css';
 
 function Calculator() {
     const [num1, setNum1] = useState('');
