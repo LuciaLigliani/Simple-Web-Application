@@ -116,9 +116,8 @@ p {
 
 .result {
   margin-top: 40px;
-  font-weight: bold;
-  font-size: 1.4em;
-  color: #484848; 
+  font-size: 1.5em;
+  color: #222222; 
 }
 
 .error {
@@ -150,20 +149,22 @@ p {
 }
 
 .tooltip img {
-  width: 40px;
-  height: 40px;
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
 }
 
 .tooltip .tooltiptext {
   visibility: hidden;
-  width: 200px;
+  margin: 10px;
+  /* width: 200px; */
   background-color: #696969;
   color: #ffffff;
   font-weight: normal;
-  font-size: 0.9em;
+  font-size: 0.8em;
   text-align: center;
   border-radius: 5px;
-  padding: 5px 0;
+  padding: 10px 10px;
   position: absolute;
   z-index: 1;
   left: 100%;
